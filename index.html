@@ -15,6 +15,7 @@
     <meta property="og:description" content="사랑을 영원으로 맹세하는 날, 소중한 분들과 함께라면 더없는 기쁨으로 여기겠습니다." />
     <meta name="format-detection" content="telephone=no" />
     <title>강진수, 김희진의 모바일 청첩장</title>
+	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <style>
@@ -69,6 +70,37 @@
     </script>
 </head>
 <body class="text-center">
+<a id="kakao-link-btn" href="javascript:;">
+<img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+</a>
+<script type='text/javascript'>
+  //<![CDATA[
+    Kakao.init('5a2a14cdd51f253421735f04c645ee8f');
+
+    Kakao.Link.createDefaultButton({
+      container: '#kakao-link-btn',
+      objectType: 'feed',
+      content: {
+        title: '대제목',
+        description: '소제목',
+        imageUrl: '이미지주소',
+        link: {
+          mobileWebUrl: 'https://js-hj.github.io/',
+          webUrl: 'https://js-hj.github.io/'
+        }
+      },
+      buttons: [
+        {
+          title: '버튼 타이틀',
+          link: {
+            mobileWebUrl: 'https://js-hj.github.io/',
+            webUrl: 'https://js-hj.github.io/'
+          }
+        }
+      ]
+    });
+  //]]>
+</script>
 <div class="top-div">
     <header class="inner cover cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <h1 class="wow fadeIn cover-heading" style="text-shadow: 1px 1px 5px black; text-align: right; margin-top: 0.5em; margin-right: 0.5em; font-size: 2rem;">
@@ -279,16 +311,16 @@
                     <div class="col-6 section4-sec1-2">
                         <span class="section4-sec1">아버지</span>
                         &nbsp&nbsp&nbsp
-                        <span class="section4-sec2">김재화</span>
+                        <span class="section4-sec2">강창진</span>
                         <br/>
                         <span class="section4-sec1">어머니</span>
                         &nbsp&nbsp&nbsp
-                        <span class="section4-sec2">고복순</span>
+                        <span class="section4-sec2">설경화</span>
                     </div>
                     <div class="col section4-sec1-2">
-                        <span class="section4-sec1">아버지</span>&nbsp&nbsp&nbsp<span class="section4-sec2">이신형</span>
+                        <span class="section4-sec1">아버지</span>&nbsp&nbsp&nbsp<span class="section4-sec2">김종호</span>
                         <br/>
-                        <span class="section4-sec1">어머니</span>&nbsp&nbsp&nbsp<span class="section4-sec2">한정연</span>
+                        <span class="section4-sec1">어머니</span>&nbsp&nbsp&nbsp<span class="section4-sec2">전윤옥</span>
                     </div>
                 </div>
             </div>
@@ -351,7 +383,7 @@
         <div class="wow fadeInUp section5 inner cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
             <br/>
             <p class="section5-title section5-main">Date</p>
-            <p class="section5-title section5-sub" style="margin-top: 0;">11월 28일 · 토요일 · 오전 11:00</p>
+            <p class="section5-title section5-sub" style="margin-top: 0;">11월 11일 · 토요일 · 오후 12:00</p>
             <table class="wow fadeInUp section5-title section5-table">
                 <tr>
                     <td class="sun">S</td>
@@ -363,61 +395,61 @@
                     <td>S</td>
                 </tr>
                 <tr>
-                    <td class="sun">1</td>
+                    <td class="sun"></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
                     <td>2</td>
                     <td>3</td>
                     <td>4</td>
-                    <td>5</td>
+                </tr>
+                <tr>
+                    <td class="sun">5</td>
                     <td>6</td>
                     <td>7</td>
-                </tr>
-                <tr>
-                    <td class="sun">8</td>
+                    <td>8</td>
                     <td>9</td>
                     <td>10</td>
-                    <td>11</td>
-                    <td>12</td>
-                    <td>13</td>
-                    <td>14</td>
+                    <td class="check">11</td>
                 </tr>
                 <tr>
-                    <td class="sun">15</td>
+                    <td class="sun">12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
                     <td>16</td>
                     <td>17</td>
                     <td>18</td>
-                    <td>19</td>
-                    <td>20</td>
-                    <td>21</td>
                 </tr>
                 <tr>
-                    <td class="sun">22</td>
+                    <td class="sun">19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
                     <td>23</td>
                     <td>24</td>
                     <td>25</td>
-                    <td>26</td>
-                    <td>27</td>
-                    <td class="check">28</td>
                 </tr>
                 <tr>
-                    <td class="sun">29</td>
+                    <td class="sun">26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
                     <td>30</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
                     <td></td>
                     <td></td>
                 </tr>
             </table>
-            <p class="wow fadeInUp section5-title section5-sub" style="margin-top:1.3em">명운 ❤️ 재은 결혼식이 <span id="d-day"></span>일 남았습니다.</p>
+            <p class="wow fadeInUp section5-title section5-sub" style="margin-top:1.3em">진수 ❤️ 희진 결혼식이 <span id="d-day"></span>일 남았습니다.</p>
             <br/><br/>
         </div>
         <div class="wow fadeInUp inner cover-container d-flex w-100 h-100 mx-auto flex-column">
             <br/><br/>
             <p class="wow fadeInUp section6-title section6-main">Location</p>
             <div class="wow fadeInUp  section6-title">
-                <p class="section6-location-main" style="margin-bottom: 0;">더채플앳웨스트 7층 단독홀</p>
+                <p class="section6-location-main" style="margin-bottom: 0;">ICC웨딩홀 1층 크리스탈 볼룸홀</p>
                 <p class="section6-location-sub" style="text-align: center;">
-                    서울특별시 강서구 양천로 476
+                    대전 유성구 엑스포로123번길 55
                 </p>
             </div>
             <br/>
@@ -502,7 +534,7 @@
             <br/><br/>
         </div>
         <footer class="pt-5 text-muted text-center text-small section8">
-            <p class="mb-1">© 2020-11-28 Myungwoon, Jeaeun</p>
+            <p class="mb-1">© 2023-11-11 JS, HJ</p>
             <br/><br/>
             <br/><br/>
         </footer>
