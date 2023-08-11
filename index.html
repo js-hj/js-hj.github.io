@@ -67,6 +67,15 @@
 
             $("#d-day").html(result);
         });
+
+	function copyVal(val) {
+  		const t = document.createElement("textarea");
+  		document.body.appendChild(t);
+  		t.value = val;
+  		t.select();
+  		document.execCommand('copy');
+  		document.body.removeChild(t);
+	}
     </script>
 </head>
 <body class="text-center">
@@ -299,7 +308,7 @@
 								<tr>
 									<th>신랑 父</th>
 									<th>강창진</th>
-									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기"></td>
+									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyVal(this.value);"></td>
 								</tr>
 								<tr  style="border-bottom: 10px solid #fff;">
 									<td>농협</td>
@@ -308,7 +317,7 @@
 								<tr>
 									<th>신랑 母</th>
 									<th>설경화</th>
-									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기"></td>
+									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyVal(this.value);"></td>
 								</tr>
 								<tr  style="border-bottom: 10px solid #fff;">
 									<td>농협</td>
@@ -317,7 +326,7 @@
 								<tr>
 									<th>신랑</th>
 									<th>강진수</th>
-									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기"></td>
+									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyVal(this.value);"></td>
 								</tr>
 								<tr>
 									<td>농협</td>
@@ -351,7 +360,7 @@
 								<tr>
 									<th>신부 母</th>
 									<th>전윤옥</th>
-									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기"></td>
+									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyVal("44112119087");"></td>
 								</tr>
 								<tr  style="border-bottom: 10px solid #fff;">
 									<td>농협</td>
@@ -360,7 +369,7 @@
 								<tr>
 									<th>신부</th>
 									<th>김희진</th>
-									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기"></td>
+									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyVal("3333042341928");"></td>
 								</tr>
 								<tr>
 									<td>카카오뱅크</td>
