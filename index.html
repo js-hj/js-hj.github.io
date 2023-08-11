@@ -76,7 +76,10 @@
 		var clipboard = new ClipboardJS(t);
 		clipboard.on('success', function () {
 			alert("복사되었습니다.");
-        	});
+        	}).on( 'error', function(e) {
+			console.log(e);
+		});
+
 		document.body.removeChild(t);
 	}
     </script>
