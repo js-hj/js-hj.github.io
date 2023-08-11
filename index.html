@@ -72,9 +72,11 @@
   		const t = document.createElement("textarea");
   		document.body.appendChild(t);
   		t.value = val;
-  		t.select();
-  		document.execCommand('copy');
-  		document.body.removeChild(t);
+
+		var clipboard = new ClipboardJS(t);
+		clipboard.on('success', function () {
+			alert("복사되었습니다.");
+        	});
 	}
     </script>
 </head>
