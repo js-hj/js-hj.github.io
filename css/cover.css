@@ -479,3 +479,11 @@ header {
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
+
+.copy-btn{
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: 'DancingScript-b';
+    padding: 2px 10px 2px 10px;
+}
