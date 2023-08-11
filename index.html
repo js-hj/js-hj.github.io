@@ -69,18 +69,12 @@
         });
 
 	function copyVal(val) {
-  		const t = document.createElement("textarea");
-  		document.body.appendChild(t);
-  		t.value = val;
-
-		var clipboard = new ClipboardJS(t);
+		var clipboard = new ClipboardJS('.bankNo');
 		clipboard.on('success', function () {
 			alert("복사되었습니다.");
         	}).on( 'error', function(e) {
 			console.log(e);
 		});
-
-		document.body.removeChild(t);
 	}
     </script>
 </head>
@@ -318,7 +312,7 @@
 								</tr>
 								<tr  style="border-bottom: 10px solid #fff;">
 									<td>농협</td>
-									<td>111-1111-111111</td>
+									<td class="bankNo">111-1111-111111</td>
 								</tr>
 								<tr>
 									<th>신랑 母</th>
@@ -327,7 +321,7 @@
 								</tr>
 								<tr  style="border-bottom: 10px solid #fff;">
 									<td>농협</td>
-									<td>111-1111-111111</td>
+									<td class="bankNo">111-1111-111111</td>
 								</tr>
 								<tr>
 									<th>신랑</th>
@@ -336,7 +330,7 @@
 								</tr>
 								<tr>
 									<td>농협</td>
-									<td>111-1111-111111</td>
+									<td class="bankNo">111-1111-111111</td>
 									<td style="text-align:right;"><a href="https://link.kakaopay.com/_/xLLwtKj"><img src="img/btn/payment_icon_yellow_small.png" class="pay-btn"/></a></td>
 								</tr>
 							</table>
@@ -370,7 +364,7 @@
 								</tr>
 								<tr  style="border-bottom: 10px solid #fff;">
 									<td>농협</td>
-									<td>441-12-119087</td>
+									<td class="bankNo">441-12-119087</td>
 								</tr>
 								<tr>
 									<th>신부</th>
@@ -379,7 +373,7 @@
 								</tr>
 								<tr>
 									<td>카카오뱅크</td>
-									<td>3333-04-2341928</td>
+									<td class="bankNo">3333-04-2341928</td>
 									<td style="text-align:right;"><a href="https://link.kakaopay.com/_/xLLwtKj"><img src="img/btn/payment_icon_yellow_small.png" class="pay-btn"/></a></td>
 								</tr>
 							</table>
