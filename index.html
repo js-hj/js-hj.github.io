@@ -70,7 +70,6 @@
         });
 
 	function copyVal(val) {
-		alert(val); 
 		var clipboard = new ClipboardJS(val);
 		clipboard.on('success', function () {
 			alert("복사되었습니다.");
@@ -78,6 +77,14 @@
 			console.log(e);
 		});
 	}
+
+	function copyToClipBoard(val) {
+        	var content = document.getElementById(val);
+        	content.select();
+	        content.setSelectionRange(0, 99999);   // 모바일 브라우저(ios)에서의 동작을 위한 추가코드
+        	document.execCommand('copy');
+        	content.setSelectionRange(0, 0);       // 모바일 브라우저(ios)에서의 동작을 위한 추가코드
+    	}
     </script>
 </head>
 <body class="text-center">
@@ -328,7 +335,7 @@
 								<tr>
 									<th>신랑 父</th>
 									<th>강창진</th>
-									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyVal('#mp');"></td>
+									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyToClipBoard('mp');"></td>
 								</tr>
 								<tr  style="border-bottom: 10px solid #fff;">
 									<td>기업</td>
@@ -337,7 +344,7 @@
 								<tr>
 									<th>신랑 母</th>
 									<th>설경화</th>
-									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyVal('mm');"></td>
+									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyToClipBoard('mm');"></td>
 								</tr>
 								<tr  style="border-bottom: 10px solid #fff;">
 									<td>국민</td>
@@ -346,11 +353,11 @@
 								<tr>
 									<th>신랑</th>
 									<th>강진수</th>
-									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyVal(this.value);"></td>
+									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyToClipBoard('m');"></td>
 								</tr>
 								<tr>
 									<td>우리</td>
-									<td class="bankNo">1002-963-271302</td>
+									<td><input id="m" type="text" style="display:none;" value="1002963271302"/>1002-963-271302</td>
 									<td style="text-align:right;"><a href="https://qr.kakaopay.com/Ej7qzrxkR"><img src="img/btn/payment_icon_yellow_small.png" class="pay-btn"/></a></td>
 								</tr>
 							</table>
