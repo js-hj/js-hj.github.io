@@ -70,7 +70,8 @@
         });
 
 	function copyVal(val) {
-		var clipboard = new ClipboardJS('.bankNo');
+		alert(val);
+		var clipboard = new ClipboardJS(val);
 		clipboard.on('success', function () {
 			alert("복사되었습니다.");
         	}).on( 'error', function(e) {
@@ -201,6 +202,24 @@
                     <div class="carousel-item">
                         <img src="img/test/20.jpg" class="d-block w-100">
                     </div>
+                    <div class="carousel-item">
+                        <img src="img/test/21.jpg" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/test/22.jpg" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/test/23.jpg" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/test/24.jpg" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/test/25.jpg" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/test/26.jpg" class="d-block w-100">
+                    </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -309,20 +328,20 @@
 								<tr>
 									<th>신랑 父</th>
 									<th>강창진</th>
-									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyVal(this.value);"></td>
+									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyVal('#mp');"></td>
 								</tr>
 								<tr  style="border-bottom: 10px solid #fff;">
-									<td>농협</td>
-									<td class="bankNo">111-1111-111111</td>
+									<td>기업</td>
+									<td><inpyt id="mp" type="text" style="display:none;" value="36402482701010"/>364-024827-01-010</td>
 								</tr>
 								<tr>
 									<th>신랑 母</th>
 									<th>설경화</th>
-									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyVal(this.value);"></td>
+									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyVal('mm');"></td>
 								</tr>
 								<tr  style="border-bottom: 10px solid #fff;">
-									<td>농협</td>
-									<td class="bankNo">111-1111-111111</td>
+									<td>국민</td>
+									<td><inpyt id="mm" type="text" style="display:none;" value="73600294110896"/>736002-94-110896</td>
 								</tr>
 								<tr>
 									<th>신랑</th>
@@ -330,8 +349,8 @@
 									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyVal(this.value);"></td>
 								</tr>
 								<tr>
-									<td>농협</td>
-									<td class="bankNo">111-1111-111111</td>
+									<td>우리</td>
+									<td class="bankNo">1002-963-271302</td>
 									<td style="text-align:right;"><a href="https://link.kakaopay.com/_/xLLwtKj"><img src="img/btn/payment_icon_yellow_small.png" class="pay-btn"/></a></td>
 								</tr>
 							</table>
