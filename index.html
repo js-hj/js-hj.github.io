@@ -78,14 +78,37 @@
 		});
 	}
 
-	function copyToClipBoard(val) {
-        	var content = document.getElementById(val);
+	function copyToClipBoard(content) {
+        	/*var content = document.getElementById(val);
 		console.log(content);
         	content.select();
-	        content.setSelectionRange(0, 99999);   // 모바일 브라우저(ios)에서의 동작을 위한 추가코드
+	        content.setSelectionRange(0, 99999);   
         	document.execCommand('copy');
-        	content.setSelectionRange(0, 0);       // 모바일 브라우저(ios)에서의 동작을 위한 추가코드
+        	content.setSelectionRange(0, 0);       */
+    	
+	// clipboard API 사용
+   	if (navigator.clipboard !== undefined) {
+      		navigator.clipboard.writeText(content.value).then(() => {
+          		alert('텍스트가 복사되었습니다.');
+        	});
+    	} else {
+      		// execCommand 사용
+      		const textArea = document.createElement('textarea');
+      		textArea.value = content.value;
+      		document.body.appendChild(textArea);
+      		textArea.select();
+      		textArea.setSelectionRange(0, 99999);
+      		try {
+        		document.execCommand('copy');
+      		} catch (err) {
+        		console.error('복사 실패', err);
+      		}
+      		textArea.setSelectionRange(0, 0);
+      		document.body.removeChild(textArea);
+      		alert('복사되었습니다.');
     	}
+		
+	}
     </script>
 </head>
 <body class="text-center">
