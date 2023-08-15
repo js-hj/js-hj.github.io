@@ -69,46 +69,29 @@
             $("#d-day").html(result);
         });
 
-	function copyVal(val) {
-		var clipboard = new ClipboardJS(val);
-		clipboard.on('success', function () {
-			alert("복사되었습니다.");
-        	}).on( 'error', function(e) {
-			console.log(e);
-		});
-	}
-
 	function copyToClipBoard(val) {
-        	/*var content = document.getElementById(val);
-		console.log(content);
-        	content.select();
-	        content.setSelectionRange(0, 99999);   
-        	document.execCommand('copy');
-        	content.setSelectionRange(0, 0);       */
-    	
-	// clipboard API 사용
-	var content = document.getElementById(val);
-   	if (navigator.clipboard !== undefined) {
-      		navigator.clipboard.writeText(content.value).then(() => {
-          		alert('텍스트가 복사되었습니다.');
-        	});
-    	} else {
-      		// execCommand 사용
-      		const textArea = document.createElement('textarea');
-      		textArea.value = content.value;
-      		document.body.appendChild(textArea);
-      		textArea.select();
-      		textArea.setSelectionRange(0, 99999);
-      		try {
-        		document.execCommand('copy');
-      		} catch (err) {
-        		console.error('복사 실패', err);
-      		}
-      		textArea.setSelectionRange(0, 0);
-      		document.body.removeChild(textArea);
-      		alert('복사되었습니다.');
-    	}
-		
+		// clipboard API 사용
+		var content = document.getElementById(val);
+   		if (navigator.clipboard !== undefined) {
+      			navigator.clipboard.writeText(content.value).then(() => {
+          			alert('복사되었습니다.');
+        		});
+    		} else {
+      			// execCommand 사용
+      			const textArea = document.createElement('textarea');
+      			textArea.value = content.value;
+      			document.body.appendChild(textArea);
+      			textArea.select();
+      			textArea.setSelectionRange(0, 99999);
+      			try {
+        			document.execCommand('copy');
+      			} catch (err) {
+        			console.error('복사 실패', err);
+      			}
+      			textArea.setSelectionRange(0, 0);
+      			document.body.removeChild(textArea);
+      			alert('복사되었습니다.');
+    		}
 	}
     </script>
 </head>
@@ -412,20 +395,20 @@
 								<tr>
 									<th>신부 母</th>
 									<th>전윤옥</th>
-									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyVal('44112119087');"></td>
+									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyToClipBoard('dm');"></td>
 								</tr>
 								<tr  style="border-bottom: 10px solid #fff;">
 									<td>농협</td>
-									<td class="bankNo">441-12-119087</td>
+									<td><input id="dm" type="text" style="display:none;" value="44112119087"/>441-12-119087</td>
 								</tr>
 								<tr>
 									<th>신부</th>
 									<th>김희진</th>
-									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyVal('3333042341928');"></td>
+									<td style="text-align:right;"><input type="button" class="copy-btn" value="복사하기" onclick="copyToClipBoard('d');"></td>
 								</tr>
 								<tr>
 									<td>카카오뱅크</td>
-									<td class="bankNo">3333-04-2341928</td>
+									<td><input id="d" type="text" style="display:none;" value="3333042341928"/>3333-04-2341928</td>
 									<td style="text-align:right;"><a href="https://link.kakaopay.com/_/xLLwtKj"><img src="img/btn/payment_icon_yellow_small.png" class="pay-btn"/></a></td>
 								</tr>
 							</table>
