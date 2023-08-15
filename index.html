@@ -80,6 +80,7 @@
 
 	function copyToClipBoard(val) {
         	var content = document.getElementById(val);
+		console.log(content);
         	content.select();
 	        content.setSelectionRange(0, 99999);   // 모바일 브라우저(ios)에서의 동작을 위한 추가코드
         	document.execCommand('copy');
