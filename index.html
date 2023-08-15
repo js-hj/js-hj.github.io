@@ -78,7 +78,7 @@
 		});
 	}
 
-	function copyToClipBoard(content) {
+	function copyToClipBoard(val) {
         	/*var content = document.getElementById(val);
 		console.log(content);
         	content.select();
@@ -87,6 +87,7 @@
         	content.setSelectionRange(0, 0);       */
     	
 	// clipboard API 사용
+	var content = document.getElementById(val);
    	if (navigator.clipboard !== undefined) {
       		navigator.clipboard.writeText(content.value).then(() => {
           		alert('텍스트가 복사되었습니다.');
